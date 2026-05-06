@@ -27,3 +27,14 @@ Python · XGBoost · Scikit-learn · KNN Imputer · Pandas · Matplotlib · Seab
 ## Data Preprocessing
 - **Data Cleaning** — handled missing values in temperature, humidity, and windspeed using KNN Imputation (k=5)
 - **One-hot encoding** for categorical variables (season, month, hour, weekday, weather condition)
+
+## Business Insights
+
+- **Time-of-day dominates demand** — evening peaks (hr_17, hr_18) and morning commute (hr_8) are the highest-demand periods
+- **Weather plays a secondary role** — temperature and humidity influence demand but are less critical than hour of day
+- **1–5 AM is the optimal maintenance window** — extremely low demand makes it ideal for centralized bike maintenance and charging
+
+## Recommendations
+
+1. **Elastic Rebalancing Strategy** — use XGBoost hourly forecasts to redistribute bikes before rush periods and prevent stockouts
+2. **Strategic Fleet Inventory Management** — maintain slightly higher inventory during comfortable non-peak hours to buffer demand surges
