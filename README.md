@@ -1,6 +1,6 @@
 # Bike Sharing Demand Prediction
 
-Benchmarking SVM, GBM, and XGBoost to predict hourly bike rental demand using the UCI Bike Sharing dataset (17,379 records).
+Benchmarking SVM, GBM, and XGBoost to predict hourly bike rental demand using the Bike Sharing dataset (17,379 records).
 
 ## Model Results
 
@@ -22,7 +22,17 @@ Benchmarking SVM, GBM, and XGBoost to predict hourly bike rental demand using th
 Python · XGBoost · Scikit-learn · KNN Imputer · Pandas · Matplotlib · Seaborn
 
 ## Dataset
-[Kaggle — Bike Sharing Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset) — hourly bike rentals with weather and temporal features
+17,379 hourly records with weather and temporal features
+
+| Feature | Description |
+|---------|-------------|
+| hr | Hour of day (0-23) — strongest demand predictor |
+| temp / atemp | Normalized temperature and feeling temperature |
+| hum | Normalized humidity |
+| windspeed | Normalized wind speed |
+| season | Spring / Summer / Fall / Winter |
+| weathersit | Weather condition (1: Clear → 4: Heavy Rain/Snow) |
+| cnt | Target variable — total hourly bike rentals |
 
 ## Data Preprocessing
 - **Data Cleaning** — handled missing values in temperature, humidity, and windspeed using KNN Imputation (k=5)
