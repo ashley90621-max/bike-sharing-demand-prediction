@@ -15,11 +15,15 @@ Benchmarking SVM, GBM, and XGBoost to predict hourly bike rental demand using th
 ## Key Methods
 - **KNN Imputation (k=5)** — handled missing values in temperature, humidity, and windspeed
 - **Feature Engineering** — one-hot encoding for season, month, hour, weekday, and weather condition
-- **Feature Importance Analysis** — identified key demand drivers for GBM and XGBoost
+- **Feature Importance Analysis** — identified key demand drivers for SVM, GBM and XGBoost
 - **Model Evaluation** — compared models via RMSE (lower is better) and R² (higher is better)
 
 ## Tech Stack
 Python · XGBoost · Scikit-learn · KNN Imputer · Pandas · Matplotlib · Seaborn
 
 ## Dataset
-[UCI Bike Sharing Dataset](https://archive.ics.uci.edu/ml/datasets/bike+sharing+dataset) — hourly bike rentals with weather and temporal features
+[Kaggle — Bike Sharing Dataset](https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset) — hourly bike rentals with weather and temporal features
+
+## Data Preprocessing
+- **Data Cleaning** — handled missing values in temperature, humidity, and windspeed using KNN Imputation (k=5)
+- **One-hot encoding** for categorical variables (season, month, hour, weekday, weather condition)
